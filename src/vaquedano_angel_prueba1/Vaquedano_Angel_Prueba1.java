@@ -1,0 +1,74 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package vaquedano_angel_prueba1;
+
+import java.util.Scanner;
+import java.util.Random;
+
+/**
+ *
+ * @author angel
+ */
+public class Vaquedano_Angel_Prueba1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner lea = new Scanner(System.in);
+        Random numrandom = new Random();
+        int opciones = 0;
+        
+        //Ejercicio 1
+        String palabranormal = "";
+        
+        //Ejercicio 2
+        int numero = 0;
+        int suma = 0;
+
+        while (true) {
+            System.out.println("\n---Menu---"
+                    + "\n1. Palabra al reves."
+                    + "\n2. Numero perfecto"
+                    + "\n3. Primos"
+                    + "\n4. Votaciones"
+                    + "\n5. Salir");
+            System.out.println("Favor ingrese la opcion que desea realizar: ");
+            opciones = lea.nextInt();
+            if (opciones > 0 && opciones <= 5) {
+                switch (opciones) {
+                    case 1:
+                        System.out.println("Bienvenido al ejerecicio palabra al reves!");
+                        System.out.println("Favor ingrese una palabra: ");
+                        palabranormal=lea.next();
+                        for(int contador=palabranormal.length()-1;contador>=0;contador--){
+                            System.out.print(palabranormal.charAt(contador)+
+                                    "\n ");
+                        }
+
+                        break;
+                    case 2:
+
+                    case 3:
+                        
+                        break;
+
+                    case 4:
+                        
+                        break;
+
+                    case 5:
+                        
+                        break;
+
+                }
+            } else {
+                System.out.println("Favor ingrese una opcion valida");
+            }
+        }
+
+    }
+}
