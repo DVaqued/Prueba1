@@ -21,10 +21,10 @@ public class Vaquedano_Angel_Prueba1 {
         Scanner lea = new Scanner(System.in);
         Random numrandom = new Random();
         int opciones = 0;
-        
+
         //Ejercicio 1
         String palabranormal = "";
-        
+
         //Ejercicio 2
         int numero = 0;
         int suma = 0;
@@ -43,32 +43,46 @@ public class Vaquedano_Angel_Prueba1 {
                     case 1:
                         System.out.println("Bienvenido al ejerecicio palabra al reves!");
                         System.out.println("Favor ingrese una palabra: ");
-                        palabranormal=lea.next();
-                        for(int contador=palabranormal.length()-1;contador>=0;contador--){
-                            System.out.print(palabranormal.charAt(contador)+
-                                    "\n ");
+                        palabranormal = lea.next();
+                        for (int contador = palabranormal.length() - 1; contador >= 0; contador--) {
+                            System.out.print(palabranormal.charAt(contador)
+                                    + "\n ");
                         }
 
                         break;
                     case 2:
+                        System.out.println("Bienvenido al ejercicio numero perfecto!");
+                        System.out.println("Favor ingrese el numero al que desea evaluar: ");
+                        numero = lea.nextInt();
+                        for (int contador1 = 1; contador1 < numero; contador1++) {
+                            if (numero % contador1 == 0) {
+                                suma = suma + contador1;
+                            }
+                        }
+                        if (suma == numero) {
+                            System.out.println("Su numero es perfecto.");
+                            break;
+                        } else {
+                            System.out.println("Su numero no es perfecto.");
+
+                        }
 
                     case 3:
-                        
+
                         break;
 
                     case 4:
-                        
+
                         break;
 
                     case 5:
-                        
-                        break;
+                        System.out.println("Gracias!");
+                        System.exit(0);
 
                 }
             } else {
                 System.out.println("Favor ingrese una opcion valida");
-            }
         }
-
+    }
     }
 }
