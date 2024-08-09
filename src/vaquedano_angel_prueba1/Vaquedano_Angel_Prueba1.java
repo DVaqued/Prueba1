@@ -19,7 +19,7 @@ public class Vaquedano_Angel_Prueba1 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner lea = new Scanner(System.in);
-        Random numrandom = new Random();
+        Random random = new Random();
         int opciones = 0;
 
         //Ejercicio 1
@@ -29,6 +29,7 @@ public class Vaquedano_Angel_Prueba1 {
         int numero = 0;
         int suma = 0;
 
+        //Ejercicio 3
         while (true) {
             System.out.println("\n---Menu---"
                     + "\n1. Palabra al reves."
@@ -68,10 +69,21 @@ public class Vaquedano_Angel_Prueba1 {
                         }
 
                     case 3:
-
-                        break;
-
+                        int numRandom = random.nextInt(100);
+                        System.out.println(numRandom);
+                        int suma2 = 0;
+                        for (int contador1 = 1; contador1 <= numRandom; contador1++) {
+                            if (numRandom % contador1 == 0) {
+                                suma2 += contador1;
+                            }
+                        }
+                        if (suma2 == numRandom + 1) {
+                            System.out.println("Su numero es primo.");
+                        } else {
+                            System.out.println("No es un numero primo.");
+                        }
                     case 4:
+                        
 
                         break;
 
@@ -82,7 +94,7 @@ public class Vaquedano_Angel_Prueba1 {
                 }
             } else {
                 System.out.println("Favor ingrese una opcion valida");
+            }
         }
-    }
     }
 }
